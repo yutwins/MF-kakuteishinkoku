@@ -1,0 +1,153 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.inner {
+  width: 953px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  display: grid;
+  place-items: center;
+  background-color: #FFCF48;
+  border-radius: 30px;
+  width: 249px;
+  height: 48px;
+}
+.btn__text {
+  padding-right: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #0053A5;
+  position: relative;
+}
+.btn__text::after {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../images/Exclude.png) no-repeat center center/cover;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+}
+.header-inner {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header__logo {
+  display: block;
+  width: 328px;
+}
+.header__logoImg {
+  width: 100%;
+  height: auto;
+}
+.header__btn {
+  width: 177px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background-color: #FFCF48;
+  border-radius: 6px;
+}
+.header__btn--text {
+  padding-right: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #0054AC;
+  position: relative;
+}
+.header__btn--text::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid #0054AC;
+  border-bottom: 1px solid #0054AC;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+}
+
+/* ========================================================================
+Foundation - ファウンデーション
+======================================================================== */
+/* ========================================================================
+	Layout - レイアウト
+======================================================================== */
+/* ========================================================================
+	Objects - オブジェクト
+======================================================================== */

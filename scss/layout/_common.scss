@@ -1,0 +1,53 @@
+@use "../foundation/color" as *;
+@use "../foundation/variables" as *;
+
+$layout-width-inner: 1080px;
+
+// ブレイクポイント
+$breakpoints: (
+    "sp": "(max-width: 767px)",
+    "tab": "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})",
+    "pc": "(min-width: #{$layout-width-inner})",
+);
+// メディアクエリ
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+.inner {
+    width: 953px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.btn {
+    display: grid;
+    place-items: center;
+    background-color: $btn_color;
+    border-radius: 30px;
+    width: 249px;
+    height: 48px;
+
+    &__text {
+        padding-right: 40px;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: $Poppins;
+        color: $theme02_color;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 21px;
+            height: 21px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: url(../images/Exclude.png) no-repeat center center / cover;
+        }
+    }
+}
