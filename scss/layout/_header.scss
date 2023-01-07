@@ -4,16 +4,26 @@
     width: 100%;
     height: 70px;
 
+    @include mq("sp") {
+        height: 52px;
+    }
+
     &-inner {
+        max-width: 95%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
     }
 
     &__logo {
         display: block;
         width: 328px;
+
+        @include mq("sp") {
+            width: 224px; 
+        }
     }
     &__logoImg {
         width: 100%;
@@ -28,12 +38,21 @@
         background-color: $btn_color;
         border-radius: 6px;
 
+        @include mq("sp") {
+            width: 114px;
+            height: 26px;
+        }
+
         &--text {
             padding-right: 12px;
             font-size: 14px;
             font-weight: bold;
             color: $theme01_color;
             position: relative;
+
+            @include mq("sp") {
+                font-size: 10px;
+            }
 
             &::after {
                 content: "";

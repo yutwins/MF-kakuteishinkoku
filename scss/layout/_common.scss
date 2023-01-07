@@ -16,6 +16,21 @@ $breakpoints: (
     }
 }
 
+.pc-only {
+    display: block;
+
+    @include mq("sp") {
+        display: none;
+    }
+}
+.sp-only {
+    display: none;
+
+    @include mq("sp") {
+        display: block;
+    }
+}
+
 .inner {
     width: 953px;
     max-width: 100%;

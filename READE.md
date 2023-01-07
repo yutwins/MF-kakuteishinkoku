@@ -20,7 +20,7 @@ font-family: 'Poppins', sans-serif;
 
 
 ＜Memo＞
-・アコーディオンあり
+・2か所アコーディオンあり
 
 
 
