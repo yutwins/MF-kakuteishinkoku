@@ -1353,6 +1353,151 @@ p {
   margin: 40px auto 0;
 }
 
+.qa {
+  padding-top: 85px;
+}
+@media (max-width: 767px) {
+  .qa {
+    padding-top: 57px;
+  }
+}
+.qa-items {
+  margin-top: 64px;
+}
+@media (max-width: 767px) {
+  .qa-items {
+    margin-top: 45px;
+  }
+}
+.qa-item {
+  border-top: 1px solid #B3B3B3;
+}
+@media (max-width: 767px) {
+  .qa-item {
+    padding: 0 24px;
+  }
+}
+.qa-item__inner {
+  height: 80px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (min-width: 768px) and (max-width: 1079px) {
+  .qa-item__inner {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}
+.qa-item__inner.is-active {
+  height: auto;
+  padding-bottom: 30px;
+}
+.qa-item__inner.is-active .qa-item__q {
+  height: 80px;
+}
+@media (max-width: 767px) {
+  .qa-item__inner.is-active .qa-item__q {
+    height: 64px;
+  }
+}
+.qa-item__inner.is-active .qa-item__q::after {
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+          transform: translateY(-50%) rotate(-180deg);
+}
+.qa-item__inner.is-active .qa-item__a {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.qa-item__q {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 32px;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  .qa-item__q {
+    font-size: 14px;
+  }
+}
+.qa-item__q::before, .qa-item__q::after {
+  display: block;
+  position: absolute;
+}
+.qa-item__q::before {
+  content: "Q";
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 26px;
+  line-height: 1;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  color: #0053A5;
+}
+@media (max-width: 767px) {
+  .qa-item__q::before {
+    font-size: 24px;
+  }
+}
+.qa-item__q::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(/images/arrow_bottom.png) no-repeat center center/contain;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.qa-item__a {
+  padding: 0 32px;
+  position: relative;
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 767px) {
+  .qa-item__a {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+}
+.qa-item__a::before {
+  content: "A";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 26px;
+  line-height: 1;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+@media (max-width: 767px) {
+  .qa-item__a::before {
+    font-size: 24px;
+  }
+}
+.qa-item__a--link {
+  color: #2790FE;
+  text-decoration: underline;
+}
+
 /* ========================================================================
 Foundation - ファウンデーション
 ======================================================================== */
