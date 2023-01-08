@@ -1,16 +1,25 @@
 ＜Todo＞
-
+・フォントファミリーを再度確認する！Inter部分が抜け落ちている可能性がある
 
 ＜Components＞
 
 <!-- ボタン -->
 <a href="#" class="btn"><span class="btn__text">無料で始める</span></a>
 
+<!-- セクションタイトル -->
+<h2 class="section__title">ここにテキストが入ります</h2>
+
+<!-- セクションサブタイトル -->
+<p class="section__subTitle">ここにテキストが入ります</p>
+
 <!-- Noto sans JP -->
 font-family: 'Noto Sans JP', sans-serif;
 
 <!-- Poppins -->
 font-family: 'Poppins', sans-serif;
+
+<!-- Inter -->
+font-family: 'Inter', sans-serif;
 
 ＜Questions＞
 ・FVの「Webで無料で始める」ボタンの文字とよくあるご質問の文字「Q」だけ微妙にカラーが違うが意図したものか？（#0053A5）
@@ -21,6 +30,12 @@ font-family: 'Poppins', sans-serif;
 
 ＜Memo＞
 ・2か所アコーディオンあり
+
+・「入力から申告まで、「確定申告」に必要な機能を網羅」のリストの上下余白を微調整しております。
+
+・reasonセクションアイテム2の「最新の青色申告特別控除にも対応」のSP時改行に違和感があったので微調整を行った
+・reasonセクションアイテム2のタグが画像の文字と被っているが問題はないか？
+
 
 
 
