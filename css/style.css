@@ -1131,6 +1131,228 @@ p {
   border-radius: 50%;
 }
 
+.simulation {
+  padding-top: 55px;
+  padding-bottom: 117px;
+  background-color: #F0F4FE;
+}
+@media (max-width: 767px) {
+  .simulation {
+    padding-top: 37px;
+    padding-bottom: 57px;
+  }
+}
+@media (max-width: 767px) {
+  .simulation-inner {
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+}
+.simulation-qa {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+@media (min-width: 768px) and (max-width: 1079px) {
+  .simulation-qa {
+    max-width: 95%;
+    margin: 50px auto 0;
+  }
+}
+.simulation-q:nth-child(2) {
+  margin-top: 50px;
+}
+@media (max-width: 767px) {
+  .simulation-q {
+    max-width: 330px;
+    margin: 50px auto 0;
+  }
+}
+.simulation-q__head {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  position: relative;
+}
+.simulation-q__head::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url(/images/simulation_underbar.png) no-repeat center center/cover;
+}
+@media (max-width: 767px) {
+  .simulation-q__head::after {
+    background-size: contain;
+  }
+}
+.simulation-a__row {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .simulation-a__row {
+    display: block;
+    margin-top: 23px;
+  }
+}
+.simulation-a__wrap {
+  width: 48.8%;
+  height: 84px;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(200, 212, 255, 0.6);
+          box-shadow: 0 0 20px rgba(200, 212, 255, 0.6);
+}
+@media (max-width: 767px) {
+  .simulation-a__wrap {
+    width: 100%;
+  }
+  .simulation-a__wrap:nth-child(even) {
+    margin-top: 12px;
+  }
+}
+.simulation-a__wrap input[type=radio] {
+  position: relative;
+}
+.simulation-a__wrap input[type=radio]::before, .simulation-a__wrap input[type=radio]::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+}
+.simulation-a__wrap input[type=radio]::before {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  top: -5px;
+  left: -5px;
+  border: 1px solid #C4C4C4;
+}
+.simulation-a__wrap input[type=radio]::after {
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+}
+.simulation-a__wrap input[type=radio]:checked::after {
+  background-color: #0054AC;
+}
+.simulation-result {
+  width: 100%;
+  height: auto;
+  padding-top: 47px;
+  padding-bottom: 41px;
+  padding: 47px 52px 41px 52px;
+  margin-top: 62px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+@media (min-width: 768px) and (max-width: 1079px) {
+  .simulation-result {
+    padding: 40px 45px 35px 45px;
+    max-width: 95%;
+    margin: 62px auto 0;
+  }
+}
+@media (max-width: 767px) {
+  .simulation-result {
+    max-width: 350px;
+    padding: 45px 19px;
+    margin: 33px auto 0;
+  }
+}
+.simulation-result__head {
+  font-weight: bold;
+  text-align: center;
+}
+.simulation-result__title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.simulation-result__wrap {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2.5%;
+}
+@media (max-width: 767px) {
+  .simulation-result__wrap {
+    display: block;
+  }
+}
+.simulation-result__priceArea {
+  width: 48.7%;
+  height: auto;
+  padding: 20px;
+  background-color: #E9EFFF;
+  border-radius: 10px;
+}
+@media (max-width: 767px) {
+  .simulation-result__priceArea {
+    width: 100%;
+    padding: 15px;
+  }
+  .simulation-result__priceArea:nth-child(2) {
+    margin-top: 20px;
+  }
+}
+.simulation-result__name {
+  text-align: center;
+}
+.simulation-result__price {
+  text-align: center;
+}
+.simulation-result__price--num {
+  font-size: 32px;
+  font-weight: bold;
+}
+.simulation-result__noteArea {
+  margin-top: 20px;
+}
+.simulation-result__note {
+  font-size: 12px;
+}
+.simulation-result__note--under {
+  text-decoration: underline;
+}
+.simulation-result__btn {
+  margin: 40px auto 0;
+}
+
 /* ========================================================================
 Foundation - ファウンデーション
 ======================================================================== */

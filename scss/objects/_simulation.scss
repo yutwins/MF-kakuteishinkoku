@@ -1,0 +1,241 @@
+@use "../foundation/global" as *;
+
+.simulation {
+    padding-top: 55px;
+    padding-bottom: 117px;
+    background-color: $theme03_color;
+
+    @include mq("sp") {
+        padding-top: 37px;
+        padding-bottom: 57px;
+    }
+
+    &-inner {
+
+        @include mq("sp") {
+            max-width: calc(100% - 40px);
+            margin: 0 auto;
+        }
+    }
+
+    &-qa {
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+
+        @include mq("tab") {
+            max-width: 95%;
+            margin: 50px auto 0;
+        }
+    }
+
+    &-q {
+
+        &:nth-child(2) {
+            margin-top: 50px;
+        }
+        
+        @include mq("sp") {
+            max-width: 330px;
+            margin: 50px auto 0;
+        }
+
+        &__head {
+            font-size: 18px;
+            font-weight: bold;
+            padding-bottom: 5px;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: url(/images/simulation_underbar.png) no-repeat center center / cover;
+
+                @include mq("sp") {
+                    background-size: contain;
+                }
+            }
+        }
+    }
+
+    &-a {
+
+        &__row {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @include mq("sp") {
+                display: block;
+                margin-top: 23px;
+            }
+        }
+
+        &__wrap {
+            width: 48.8%;
+            height: 84px;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(#C8D4FF, .6);
+
+            @include mq("sp") {
+                width: 100%;
+
+                &:nth-child(even) {
+                    margin-top: 12px;
+                }
+            }
+
+            input[type=radio] {
+                position: relative;
+
+                &::before,
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    border-radius: 50%;
+                }
+                &::before {
+                    width: 24px;
+                    height: 24px;
+                    background-color: #fff;
+                    top: -5px;
+                    left: -5px;
+                    border: 1px solid $gray01_color;
+                }
+                &::after {
+                    width: 14px;
+                    height: 14px;
+                    background-color: #fff;
+                    top: 0;
+                    left: 0;
+                }
+                
+                &:checked {
+                    
+                    &::after {
+                        background-color: $theme01_color;
+                    }
+                }
+    
+            }
+        }
+        
+        &__input {
+            
+        }
+        
+        &__label {
+
+        }
+    }
+
+    &-result {
+        width: 100%;
+        height: auto;
+        padding-top: 47px;
+        padding-bottom: 41px;
+        padding: 47px 52px 41px 52px;
+        margin-top: 62px;
+        background-color: #fff;
+        border-radius: 10px;
+        
+        @include mq("tab") {
+            padding: 40px 45px 35px 45px;
+            max-width: 95%;
+            margin: 62px auto 0;
+        }
+        @include mq("sp") {
+            max-width: 350px;
+            padding: 45px 19px ;
+            margin: 33px auto 0;
+        }
+
+        &__head {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        &__container {
+            
+        }
+
+        &__title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+
+        &__wrap {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5%;
+
+            @include mq("sp") {
+                display: block;
+            }
+        }
+
+        &__priceArea {
+            width: 48.7%;
+            height: auto;
+            padding: 20px;
+            background-color: $theme07_color;
+            border-radius: 10px;
+
+            @include mq("sp") {
+                width: 100%;
+                padding: 15px;
+
+                &:nth-child(2) {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        &__name {
+            text-align: center;
+        }
+
+        &__price {
+            text-align: center;
+
+            &--num {
+                font-size: 32px;
+                font-weight: bold;
+            }
+        }
+
+
+        &__noteArea {
+            margin-top: 20px;
+        }
+
+        &__note {
+            font-size: 12px;
+
+            &--under {
+                text-decoration: underline;    
+            }
+        }
+
+
+        &__btn {
+            margin: 40px auto 0;
+        }
+    }
+}

@@ -384,6 +384,65 @@
     </section>
     <!-- /.plan -->
 
+    <section class="simulation">
+        <div class="inner simulation-inner">
+            <h2 class="section__title">料金シュミレーション</h2>
+            <p class="section__subTitle">あなたにぴったりのプランを確認しましょう</p>
+            <div class="simulation-qa">
+                <div class="simulation-q">
+                    <p class="simulation-q__head">マネーフォワードの主な利用目的について教えてください</p>
+                    <div class="simulation-a__row">
+                        <div class="simulation-a__wrap">
+                            <input class="simulation-a__input" type="radio" id="answer01" name="purpose" value="" checked>
+                            <label for="answer01" class="simulation-a__label">お得に確定申告を済ませたい（主に副業の方）</label>
+                        </div>
+                        <div class="simulation-a__wrap">
+                            <input class="simulation-a__input" type="radio" id="answer02" name="purpose" value="">
+                            <label for="answer02" class="simulation-a__label">所得税だけでなく消費税の確定申告も済ませたい（主に本業・課税事業者の方）</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="simulation-q">
+                    <p class="simulation-q__head">マネーフォワード クラウド確定申告の電話サポートは必要ですか？</p>
+                    <div class="simulation-a__row">
+                        <div class="simulation-a__wrap">
+                            <input class="simulation-a__input" type="radio" id="answer03" name="support" value="" checked>
+                            <label for="answer03" class="simulation-a__label">はい</label>
+                        </div>
+                        <div class="simulation-a__wrap">
+                            <input class="simulation-a__input" type="radio" id="answer04" name="support" value="">
+                            <label for="answer04" class="simulation-a__label">いいえ</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="simulation-result">
+                <p class="simulation-result__head">あなたにおすすめのプランは…</p>
+                <!-- ここから動的になる？？ -->
+                <div class="simulation-result__container">
+                    <h3 class="simulation-result__title">パーソナルプラン</h3>
+                    <div class="simulation-result__wrap">
+                        <div class="simulation-result__priceArea">
+                            <p class="simulation-result__name">ご利用料金（年契約）</p>
+                            <p class="simulation-result__price"><span class="simulation-result__price--num">2,980</span>円（年額 9,600 円）</p>
+                        </div>
+                        <div class="simulation-result__priceArea">
+                            <p class="simulation-result__name">ご利用料金（月契約）</p>
+                            <p class="simulation-result__price"><span class="simulation-result__price--num">3,980</span>円</p>
+                        </div>
+                    </div>
+                    <div class="simulation-result__noteArea">
+                        <p class="simulation-result__note">※ 年額プラン基本料金：35,760円、月額プラン基本料金：3,980円</p>
+                        <p class="simulation-result__note">※ ご利用の機能によって<a href="#" class="simulation-result__note--under">オプション料金</a>が発生する場合があります。 ※ 電帳法オプション：<a href="#" class="simulation-result__note--under">経費精算</a> ／<a href="#" class="simulation-result__note--under">債務支払</a></p>
+                    </div>
+                    <a href="#" class="btn simulation-result__btn"><span class="btn__text">無料で始める</span></a>
+                </div>
+                <!-- ここまで-->
+            </div>
+        </div>
+    </section>
+    <!-- /.simulation -->
+
     <script src="./js/main.js"></script>
 </body>
 
