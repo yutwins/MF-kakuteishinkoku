@@ -1,0 +1,219 @@
+@use "../foundation/global" as *;
+
+.plan {
+    padding-top: 50px;
+    padding-bottom: 77px;
+
+
+    &-ul {
+        width: 953px;
+        height: 572px;
+        margin-top: 77px;
+        display: flex;
+        gap: 2%;
+        position: relative;
+        
+        @media (max-width: 1080px) {
+            display: none;
+        }
+    }
+    
+    &-balloon {
+        width: 183px;
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        &__img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    &-list {
+        display: block;
+        // width: 31.8%;
+        width: 305px;
+        height: auto;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid $gray02_color;
+        
+        &__headArea {
+            padding: 5px 0;
+            background-color: $theme04_color;
+            border-radius: 10px 10px 0 0;
+            display: grid;
+            place-items: center;
+        }
+        &__head {
+            color: $theme01_color;
+            font-weight: bold;
+            text-align: center;
+
+            &--small {
+                font-size: 12px;
+                display: inline-block;
+                position: relative;
+
+                &::before,
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 20px;
+                    height: 1px;
+                    position: absolute;
+                    top: 50%;
+                    background-color: #fff;
+                }
+                &::before {
+                    left: -23px;
+                    transform: rotate(70deg) translateY(-50%);
+                }
+                &::after {
+                    right: -23px;
+                    transform: rotate(-70deg) translateY(-50%);
+                }
+            }
+            .plan-list02__head--small {
+
+                &::before {
+                    left: -18px;
+                }
+            }
+
+            &--big {
+                font-size: 18px;
+            }
+        }
+
+
+        .plan-listContainer {
+            padding: 15px 25px;
+            text-align: center;
+        }
+
+        &__icon {
+            width: 71px;
+            
+        }
+    
+        &__year {
+            margin-top: 10px;
+        }
+        &__yearTitle {
+    
+        }
+        &__yearText {
+            line-height: 1.2;
+            
+            &--num {
+                font-size: 32px;
+                font-weight: bold;
+                padding-right: 3px;
+            }
+        }
+
+        &__month {
+            margin-top: 5px;
+        }
+        &__monthText {
+            line-height: 1.4;
+        }
+
+        &__btn {
+            margin: 12px auto 0;
+        }
+
+        &__function {
+            max-width: 255px;
+            margin: 12px auto 0;
+        }
+        &__functionTitle {
+            margin-bottom: 6px;
+        }
+        &__functionList {
+            text-align: left;
+        }
+        &__functionText {
+            padding-left: 28px;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                background: url(/images/check.png) no-repeat center center / contain;
+            }
+        }
+    }
+
+
+
+    &-bottom {
+        width: 100%;
+        height: auto;
+        padding: 16px 0;
+        margin-top: 35px;
+        background-color: $gray03_color;
+        border: 1px solid $gray04_color;
+        border-radius: 10px;
+        font-family: $Inter;
+
+        @include mq("tab") {
+            max-width: 95%;
+            margin: 30px auto 0;
+        }
+        @include mq("sp") {
+            margin: 15px auto 0;
+            max-width: 335px;
+        }
+
+        &__head {
+            padding-bottom: 12px;
+            border-bottom: 1px solid $gray04_color;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+     
+        &__ul {
+            padding-top: 18px;
+            padding-left: 60px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            @include mq("sp") {
+                display: block;
+                padding-left: 19px;
+            }
+        }
+
+        &__list {
+            width: 290px;
+            padding-left: 15px;
+            font-size: 12px;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 6px;
+                height: 6px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                background: rgba($theme02_color, .45);
+                border-radius: 50%;
+            }
+        }
+    }
+}
