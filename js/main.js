@@ -19,3 +19,13 @@ for (let i = 0; i < reasonItemCloseBtn.length; i++) {
         this.parentNode.firstElementChild.classList.remove('is-active');
     });
 }
+
+
+//qaセクション
+const qaQ = document.querySelectorAll(".qa-item__q");
+
+for (let i = 0; i < qaQ.length; i++) {
+    qaQ[i].addEventListener('click', function() {
+        this.parentNode.classList.toggle('is-active');
+    });
+}

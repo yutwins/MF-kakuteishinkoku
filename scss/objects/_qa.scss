@@ -1,0 +1,138 @@
+@use "../foundation/global" as *;
+
+.qa {
+    padding-top: 85px;
+
+    @include mq("sp") {
+        padding-top: 57px;
+    }
+ 
+    &-items {
+        margin-top: 64px;
+
+        @include mq("sp") {
+            margin-top: 45px;
+        }
+    }
+
+    &-item {
+        border-top: 1px solid $gray05_color;
+        
+        @include mq("sp") {
+            padding: 0 24px;
+        }
+
+        &__inner {
+            height: 80px;
+            overflow: hidden;
+            transition: all  .3s ease 0s;
+
+            @include mq("tab") {
+                max-width: 95%;
+                margin: 0 auto;
+            }
+            
+            &.is-active {
+                height: auto;
+                padding-bottom: 30px;
+    
+                .qa-item__q {
+                    height: 80px;
+                    
+                    @include mq("sp") {
+                        height: 64px;
+                    }
+
+
+                    &::after {
+                        transform: translateY(-50%) rotate(-180deg);
+                    }
+                }
+                .qa-item__a {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            
+        }
+
+        &__q {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 32px;
+            background-color: #fff;
+            position: relative;
+            z-index: 2;
+
+            @include mq("sp") {
+                font-size: 14px;
+            }
+
+            &::before,
+            &::after {
+                display: block;
+                position: absolute;
+            }
+            &::before {
+                content: "Q";
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                font-size: 26px;
+                line-height: 1;
+                font-weight: bold;
+                font-family: $Poppins;
+                color: $theme02_color;
+
+                @include mq("sp") {
+                    font-size: 24px;
+                }
+            }
+            &::after {
+                content: "";
+                width: 12px;
+                height: 12px;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                background: url(/images/arrow_bottom.png) no-repeat center center / contain;
+                transition: all 0.3s ease 0s;
+            }
+            
+        }
+
+        &__a {
+            // margin-top: 24px;
+            padding: 0 32px;
+            position: relative;
+            transform: translateY(-200%);
+            opacity: 0;
+            transition: all 0.3s ease 0s;
+
+            @include mq("sp") {
+                margin-top: 12px;
+                font-size: 14px;
+            }
+            
+            &::before {
+                content: "A";
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 26px;
+                line-height: 1;
+                font-weight: bold;
+                font-family: $Poppins;
+
+                @include mq("sp") {
+                    font-size: 24px;
+                }
+            }
+            &--link {
+                color: #2790FE;
+                text-decoration: underline;
+            }
+        }
+    }
+}
