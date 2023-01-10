@@ -71,17 +71,17 @@
             margin: 0 auto;   
         }
 
-        &::after {
+        &::before {
             content: "";
             display: block;
+            position: absolute;
             width: 28px;
             height: 20px;
-            position: absolute;
             bottom: 0;
             left: 50%;
             transform: translate(-50%, 10px);
             background: url(../img/Polygon.png) no-repeat center center / cover;
-            z-index: -1;
+            
         }
     }
     &__headText {
@@ -90,6 +90,8 @@
         font-size: 24px;
         font-weight: bold;
         color: $theme02_color;
+        position: relative;
+        z-index: 2;
 
         @include mq("sp") {
             font-size: 18px;

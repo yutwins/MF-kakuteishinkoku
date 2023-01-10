@@ -233,7 +233,7 @@ p {
 }
 @media (max-width: 767px) {
   .footer {
-    padding-bottom: 27px;
+    padding-bottom: 77px;
   }
 }
 .footer-ul {
@@ -313,6 +313,11 @@ p {
   gap: 11px;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
   display: none;
 }
 @media (max-width: 767px) {
@@ -419,18 +424,17 @@ p {
     margin: 0 auto;
   }
 }
-.fv__head::after {
+.fv__head::before {
   content: "";
   display: block;
+  position: absolute;
   width: 28px;
   height: 20px;
-  position: absolute;
   bottom: 0;
   left: 50%;
   -webkit-transform: translate(-50%, 10px);
           transform: translate(-50%, 10px);
   background: url(../img/Polygon.png) no-repeat center center/cover;
-  z-index: -1;
 }
 .fv__headText {
   padding-left: 9px;
@@ -438,6 +442,8 @@ p {
   font-size: 24px;
   font-weight: bold;
   color: #0053A5;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 767px) {
   .fv__headText {
@@ -1081,7 +1087,7 @@ p {
 }
 .plan-ul {
   width: 953px;
-  margin-top: 77px;
+  margin: 77px auto 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1218,7 +1224,6 @@ p {
   background: url(/img/check.png) no-repeat center center/contain;
 }
 .plan-bottom {
-  width: 100%;
   height: auto;
   padding: 16px 0;
   margin-top: 35px;
@@ -1383,6 +1388,7 @@ p {
   border-radius: 10px;
   -webkit-box-shadow: 0 0 20px rgba(200, 212, 255, 0.6);
           box-shadow: 0 0 20px rgba(200, 212, 255, 0.6);
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .simulation-a__wrap {
@@ -1419,6 +1425,9 @@ p {
 }
 .simulation-a__wrap input[type=radio]:checked::after {
   background-color: #0054AC;
+}
+.simulation-a__label {
+  cursor: pointer;
 }
 .simulation-result {
   width: 100%;

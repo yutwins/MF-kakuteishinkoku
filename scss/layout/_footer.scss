@@ -4,7 +4,7 @@
     padding-bottom: 100px;
 
     @include mq("sp") {
-        padding-bottom: 27px;
+        padding-bottom: 77px;
     }
 
     &-ul {
@@ -71,6 +71,11 @@
     justify-content: center;
     gap: 11px;
     box-shadow: 0 0 4px rgba(#000, .1);
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
     display: none;
 
     @include mq("sp") {
