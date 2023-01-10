@@ -80,8 +80,7 @@
             bottom: 0;
             left: 50%;
             transform: translate(-50%, 10px);
-            background: url(../img/Polygon.png) no-repeat center center / cover;
-            
+            background: url(../img/Polygon.png) no-repeat center center / contain;
         }
     }
     &__headText {
@@ -117,6 +116,7 @@
 
         &--emphasis {
             position: relative;
+            letter-spacing: -.2em;
 
             &::before {
                 content: "";
@@ -137,6 +137,7 @@
             }
         }
         &--pcOnly {
+            letter-spacing: -.2em;
 
             @include mq("sp") {
                 display: none;

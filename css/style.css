@@ -434,7 +434,7 @@ p {
   left: 50%;
   -webkit-transform: translate(-50%, 10px);
           transform: translate(-50%, 10px);
-  background: url(../img/Polygon.png) no-repeat center center/cover;
+  background: url(../img/Polygon.png) no-repeat center center/contain;
 }
 .fv__headText {
   padding-left: 9px;
@@ -472,6 +472,7 @@ p {
 }
 .fv__text--emphasis {
   position: relative;
+  letter-spacing: -0.2em;
 }
 .fv__text--emphasis::before {
   content: "";
@@ -491,6 +492,9 @@ p {
     width: 6px;
     height: 6px;
   }
+}
+.fv__text--pcOnly {
+  letter-spacing: -0.2em;
 }
 @media (max-width: 767px) {
   .fv__text--pcOnly {
@@ -1335,7 +1339,7 @@ p {
 .simulation-q__head {
   font-size: 18px;
   font-weight: bold;
-  padding-bottom: 5px;
+  padding-bottom: 12px;
   position: relative;
 }
 .simulation-q__head::after {
@@ -1599,6 +1603,7 @@ p {
   background-color: #fff;
   position: relative;
   z-index: 2;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .qa-item__q {
