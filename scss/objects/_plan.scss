@@ -4,17 +4,26 @@
     padding-top: 50px;
     padding-bottom: 77px;
 
+    &-inner {
+        width: 100%;
+    }
+
+    &-main {
+        width: 100%;
+        padding: 0 20px;
+        overflow-x: scroll;
+    }
 
     &-ul {
         width: 953px;
-        height: 572px;
         margin-top: 77px;
         display: flex;
+        flex-wrap: nowrap;
         gap: 2%;
         position: relative;
         
         @media (max-width: 1080px) {
-            display: none;
+            padding-bottom: 20px;
         }
     }
     
@@ -24,6 +33,10 @@
         top: -40px;
         left: 50%;
         transform: translateX(-50%);
+
+        @include mq("sp") {
+            display: none;
+        }
         
         &__img {
             width: 100%;
@@ -33,7 +46,6 @@
     
     &-list {
         display: block;
-        // width: 31.8%;
         width: 305px;
         height: auto;
         border-radius: 10px;
@@ -149,7 +161,7 @@
                 top: 50%;
                 left: 0;
                 transform: translateY(-50%);
-                background: url(/images/check.png) no-repeat center center / contain;
+                background: url(/img/check.png) no-repeat center center / contain;
             }
         }
     }

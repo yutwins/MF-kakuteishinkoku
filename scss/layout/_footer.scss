@@ -1,0 +1,98 @@
+@use "../foundation/global" as *;
+
+.footer {
+    padding-bottom: 100px;
+
+    @include mq("sp") {
+        padding-bottom: 27px;
+    }
+
+    &-ul {
+        width: 100%;
+        height: 40px;
+        background-color: $theme08_color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        
+        @include mq("sp") {
+            height: auto;
+            padding: 12px 20px;
+            flex-wrap: wrap;
+            justify-content: initial;
+            gap: 0 14px;
+        }
+    }
+
+    &__list {
+        color: #fff;
+        position: relative;
+
+        &:not(:last-child) {
+
+            &::before {
+                content: "";
+                display: block;
+                width: 1px;
+                height: 10px;
+                position: absolute;
+                top: 42%;
+                right: -6.5px;
+                background-color: #fff;
+            }
+        }
+    }
+
+    &__item {
+        font-size: 10px;
+    }
+
+    &__logo {
+        display: block;
+        width: 224px;
+        margin: 20px auto 0;
+    }
+    &__logoImg {
+        width: 100%;
+        height: auto;
+    }
+
+    &__copyright {
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+.sp-footerBtns {
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    box-shadow: 0 0 4px rgba(#000, .1);
+    display: none;
+
+    @include mq("sp") {
+        display: flex;
+    }
+    
+    &__left,
+    &__right {
+        width: 162px;
+        height: 32px;
+        box-shadow: 0 4px 4px rgba($theme02_color, .1);
+        
+        & .btn__text {
+            font-size: 13px;
+            padding-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &__right {
+        background-color: #fff;
+    }
+}

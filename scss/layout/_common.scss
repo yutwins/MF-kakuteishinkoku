@@ -62,7 +62,7 @@ $breakpoints: (
             top: 50%;
             right: 0;
             transform: translateY(-50%);
-            background: url(../images/Exclude.png) no-repeat center center / cover;
+            background: url(../img/Exclude.png) no-repeat center center / cover;
         }
     }
 }
@@ -73,6 +73,11 @@ $breakpoints: (
     font-weight: bold;
     text-align: center;
     position: relative;
+
+    @include mq("sp") {
+        max-width: calc(100% - 40px);
+        margin: 0 auto;
+    }
 
     &::after {
         content: "";
@@ -92,6 +97,7 @@ $breakpoints: (
     margin-top: 30px;
 
     @include mq("sp") {
-        margin-top: 28px;
+        max-width: calc(100% - 40px);
+        margin: 28px auto 0;
     }
 }

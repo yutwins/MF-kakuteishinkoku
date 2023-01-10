@@ -18,7 +18,8 @@
     }
 
     &__logo {
-        display: block;
+        display: flex;
+        align-items: center;
         width: 328px;
 
         @include mq("sp") {
