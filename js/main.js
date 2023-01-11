@@ -38,11 +38,15 @@ for (let i = 0; i < reasonItemCloseBtn.length; i++) {
       if (window.pageYOffset > 900) {
         if (isUp()) {
           fh.classList.remove('is-show');
-        } else {
+            } else {
           fh.classList.add('is-show')
-        }
-      } else {
+            }
+        } else {
         fh.classList.remove('is-show');
+        }
+        
+        if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.scrollHeight) {
+          fh.classList.add('is-show')
       }
     })
 }());
