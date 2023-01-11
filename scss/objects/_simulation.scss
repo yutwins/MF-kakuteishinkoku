@@ -34,10 +34,6 @@
     }
 
     &-q {
-
-        &:nth-child(2) {
-            margin-top: 50px;
-        }
         
         @include mq("sp") {
             max-width: 330px;
@@ -64,6 +60,17 @@
                     background: url(/img/simulation_underbar_sp.png) no-repeat center center / cover;
                 }
             }
+        }
+    }
+    #q-2 {
+        margin-top: 50px;
+        opacity: 0;
+        height: 0;
+
+        &.is-show {
+            transition: all 0.3s ease 0s;
+            height: auto;
+            opacity: 1;
         }
     }
 

@@ -45,6 +45,10 @@ $breakpoints: (
     width: 249px;
     height: 48px;
 
+    &:hover {
+        opacity: 0.8;
+    }
+
     &__text {
         padding-right: 40px;
         font-weight: bold;

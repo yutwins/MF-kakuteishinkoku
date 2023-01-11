@@ -14,6 +14,50 @@
         overflow-x: scroll;
     }
 
+    &-tabs {
+        max-width: 953px;
+        margin: 50px auto 0;
+        border-bottom: 3px solid #C2D1FC;
+        display: none;
+
+        @include mq("sp") {
+            display: block;
+        }
+    }
+    &-tab__group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    &__tab {
+        width: 105px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        font-size: 12px;
+        background-color: $gray04_color;
+        border-radius: 6px 6px 0 0;
+        position: relative;
+
+        &.is-active {
+            background-color: #C2D1FC;
+            
+            &::after {
+                content: "";
+                display: block;
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                bottom: -11px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: url(/img/tab_Polygon.png) no-repeat center center / contain;
+            }
+        }
+    }
+
+
     &-ul {
         width: 953px;
         margin: 77px auto 0;
@@ -24,6 +68,11 @@
         
         @media (max-width: 1080px) {
             padding-bottom: 20px;
+        }
+        @media (max-width: 767px) {
+            width: 100%;
+            margin: 20px auto 0;
+            display: block;
         }
     }
     
@@ -51,6 +100,15 @@
         border-radius: 10px;
         overflow: hidden;
         border: 1px solid $gray02_color;
+
+        @include mq("sp") {
+            display: none;
+            margin: 0 auto;
+            
+            &.is-show {
+                display: block;
+            }
+        }
         
         &__headArea {
             padding: 5px 0;

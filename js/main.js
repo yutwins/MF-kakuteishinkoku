@@ -1,6 +1,6 @@
 "use strict";
 
-// 「マネーフォワード クラウド確定申告を選ぶ理由」セクションの
+// 「マネーフォワード クラウド確定申告を選ぶ理由」セクションのクリックアニメーション
 const reasonItem = document.querySelectorAll('.reason__item');
 const reasonHead = document.querySelectorAll('.reason__itemHead');
 const reasonItemCloseBtn = document.querySelectorAll('.reason-item__closeBtn');
@@ -20,9 +20,77 @@ for (let i = 0; i < reasonItemCloseBtn.length; i++) {
     });
 }
 
+// スクロールアニメーション（SP時フッター）
+(function() {
+    const fh = document.querySelector('.sp-footerBtns');
+    const isUp = (function() {
+      const scrollElement = document.scrollingElement;
+      let flag, prePoint, scrollPoint;
+      return function() {
+        scrollPoint = scrollElement.scrollTop;
+        flag = prePoint > scrollPoint ? true : false;
+        prePoint = scrollPoint;
+        return flag;
+      }
+    }());
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 900) {
+        if (isUp()) {
+          fh.classList.remove('is-show');
+        } else {
+          fh.classList.add('is-show')
+        }
+      } else {
+        fh.classList.remove('is-show');
+      }
+    })
+}());
+  
+
+// planセクション タブ切り替えアニメーション実装
+document.addEventListener('DOMContentLoaded', function(){
+    // タブに対してクリックイベントを適用
+    const tabs = document.getElementsByClassName('plan__tab');
+    for(let i = 0; i < tabs.length; i++) {
+      tabs[i].addEventListener('click', tabSwitch, false);
+    }
+  
+    // タブをクリックすると実行する関数
+    function tabSwitch(){
+      // タブのclassの値を変更
+      document.getElementsByClassName('is-active')[0].classList.remove('is-active');
+      this.classList.add('is-active');
+      // コンテンツのclassの値を変更
+      document.getElementsByClassName('is-show')[0].classList.remove('is-show');
+      const arrayTabs = Array.prototype.slice.call(tabs);
+      const index = arrayTabs.indexOf(this);
+      document.getElementsByClassName('plan-list')[index].classList.add('is-show');
+    };
+}, false);
+
+
 
 //qaセクション
 const qaQ = document.querySelectorAll(".qa-item__q");
+
+// 質問1に回答すれば、質問2を出力する関数
+function addClassToTarget() {
+    const radio1 = document.getElementById("answer01");
+    const radio2 = document.getElementById("answer02");
+    const target = document.getElementById("q-2");
+  
+    radio1.addEventListener("click", function() {
+      target.classList.add("is-show");
+    });
+    radio2.addEventListener("click", function() {
+      target.classList.add("is-show");
+    });
+  }
+  
+// Call the function
+addClassToTarget();
+// 質問1に回答すれば、質問2を出力する関数ここまで
 
 for (let i = 0; i < qaQ.length; i++) {
     qaQ[i].addEventListener('click', function() {

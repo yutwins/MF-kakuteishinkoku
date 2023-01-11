@@ -272,11 +272,19 @@
             <h2 class="section__title">選べる3つの料金プラン</h2>
             <p class="section__subTitle">マネーフォワード クラウド確定申告の料金プラン必要な機能に応じて<br>あなたにぴったりのプランをお選びください</p>
             <div class="plan-main">
+                <div class="plan-tabs">
+                    <!--タブ-->
+                    <ul class="plan-tab__group">
+                      <li class="plan__tab tab-A">パーソナルミニ</li>
+                      <li class="plan__tab tab-B is-active">パーソナル</li>
+                      <li class="plan__tab tab-C">パーソナルプラス</li>  
+                   </ul>
+                </div>
                 <ul class="plan-ul">
                     <div class="plan-balloon">
                         <img src="./img/plan_balloon.png" alt="吹き出し" class="plan-balloon__img">
                     </div>
-                    <ll class="plan-list">
+                    <ll class="plan-list tab-A">
                         <div class="plan-list__headArea">
                             <div class="plan-list__head">
                                 <p class="plan-list__head--small">経費の仕訳登録や確定申告をする方</p>
@@ -305,7 +313,7 @@
                             </div>
                         </div>
                     </ll>
-                    <ll class="plan-list">
+                    <ll class="plan-list is-show tab-b">
                         <div class="plan-list__headArea">
                             <div class="plan-list__head">
                                 <p class="plan-list__head--small plan-list02__head--small">経費の仕訳登録や確定申告・消費税申告までする方</p>
@@ -334,7 +342,7 @@
                             </div>
                         </div>
                     </ll>
-                    <ll class="plan-list">
+                    <ll class="plan-list tab-c">
                         <div class="plan-list__headArea">
                             <div class="plan-list__head">
                                 <p class="plan-list__head--small">操作が不安で電話サポートを受けたい方</p>
@@ -396,7 +404,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="simulation-q">
+                <div id="q-2" class="simulation-q">
                     <p class="simulation-q__head">マネーフォワード クラウド確定申告の電話サポートは必要ですか？</p>
                     <div class="simulation-a__row">
                         <div class="simulation-a__wrap">
@@ -414,60 +422,60 @@
                 <p class="simulation-result__head">あなたにおすすめのプランは…</p>
                 <!-- ここから動的になる（パーソナル） -->
                 <div class="simulation-result__container01">
-                    <h3 class="simulation-result__title">パーソナルプラン</h3>
+                    <h3 class="simulation-result__title">パーソナル</h3>
                     <div class="simulation-result__wrap">
                         <div class="simulation-result__priceArea">
                             <p class="simulation-result__name">ご利用料金（年契約）</p>
-                            <p class="simulation-result__price"><span class="simulation-result__price--num">2,980</span>円（年額 9,600 円）</p>
+                            <p class="simulation-result__price"><span class="simulation-result__price--num">980</span>円（年額 11,760 円）</p>
                         </div>
                         <div class="simulation-result__priceArea">
                             <p class="simulation-result__name">ご利用料金（月契約）</p>
-                            <p class="simulation-result__price"><span class="simulation-result__price--num">3,980</span>円</p>
+                            <p class="simulation-result__price"><span class="simulation-result__price--num">1,280</span>円 / 月</p>
                         </div>
                     </div>
                     <div class="simulation-result__noteArea">
-                        <p class="simulation-result__note">※ 年額プラン基本料金：35,760円、月額プラン基本料金：3,980円</p>
-                        <p class="simulation-result__note">※ ご利用の機能によって<a href="#" class="simulation-result__note--under">オプション料金</a>が発生する場合があります。 ※ 電帳法オプション：<a href="#" class="simulation-result__note--under">経費精算</a> ／<a href="#" class="simulation-result__note--under">債務支払</a></p>
+                        <p class="simulation-result__note">※ ご利用の機能によって、従量課金・オプション料金が発生する場合があります。</p>
+                        <!-- <p class="simulation-result__note">※ ご利用の機能によって<a href="#" class="simulation-result__note--under">オプション料金</a>が発生する場合があります。 ※ 電帳法オプション：<a href="#" class="simulation-result__note--under">経費精算</a> ／<a href="#" class="simulation-result__note--under">債務支払</a></p> -->
                     </div>
                     <a href="https://erp.moneyforward.com/registration/new/" target="_blank" rel="noopener" class="btn simulation-result__btn"><span class="btn__text">無料で始める</span></a>
                 </div>
                 <!-- ここまで-->
                 <!-- ここから動的になる（パーソナルミニ） -->
                 <div class="simulation-result__container02">
-                    <h3 class="simulation-result__title">パーソナルミニプラン</h3>
+                    <h3 class="simulation-result__title">パーソナルミニ</h3>
                     <div class="simulation-result__wrap">
                         <div class="simulation-result__priceArea">
                             <p class="simulation-result__name">ご利用料金（年契約）</p>
-                            <p class="simulation-result__price"><span class="simulation-result__price--num">2,980</span>円（年額 9,600 円）</p>
+                            <p class="simulation-result__price"><span class="simulation-result__price--num">800</span>円（年額 9,600 円）</p>
                         </div>
                         <div class="simulation-result__priceArea">
                             <p class="simulation-result__name">ご利用料金（月契約）</p>
-                            <p class="simulation-result__price"><span class="simulation-result__price--num">3,980</span>円</p>
+                            <p class="simulation-result__price"><span class="simulation-result__price--num">980</span>円 / 月</p>
                         </div>
                     </div>
                     <div class="simulation-result__noteArea">
-                        <p class="simulation-result__note">※ 年額プラン基本料金：35,760円、月額プラン基本料金：3,980円</p>
-                        <p class="simulation-result__note">※ ご利用の機能によって<a href="#" class="simulation-result__note--under">オプション料金</a>が発生する場合があります。 ※ 電帳法オプション：<a href="#" class="simulation-result__note--under">経費精算</a> ／<a href="#" class="simulation-result__note--under">債務支払</a></p>
+                        <p class="simulation-result__note">※ ご利用の機能によって、従量課金・オプション料金が発生する場合があります。</p>
+                        <!-- <p class="simulation-result__note">※ ご利用の機能によって<a href="#" class="simulation-result__note--under">オプション料金</a>が発生する場合があります。 ※ 電帳法オプション：<a href="#" class="simulation-result__note--under">経費精算</a> ／<a href="#" class="simulation-result__note--under">債務支払</a></p> -->
                     </div>
                     <a href="https://erp.moneyforward.com/registration/new/" target="_blank" rel="noopener" class="btn simulation-result__btn"><span class="btn__text">無料で始める</span></a>
                 </div>
                 <!-- ここまで-->
                 <!-- ここから動的になる（パーソナルプラス） -->
                 <div class="simulation-result__container03">
-                    <h3 class="simulation-result__title">パーソナルプラスプラン</h3>
+                    <h3 class="simulation-result__title">パーソナルプラス</h3>
                     <div class="simulation-result__wrap">
                         <div class="simulation-result__priceArea">
                             <p class="simulation-result__name">ご利用料金（年契約）</p>
-                            <p class="simulation-result__price"><span class="simulation-result__price--num">2,980</span>円（年額 9,600 円）</p>
+                            <p class="simulation-result__price"><span class="simulation-result__price--num">2,980</span>円（年額 35,760 円）</p>
                         </div>
-                        <div class="simulation-result__priceArea">
+                        <!-- <div class="simulation-result__priceArea">
                             <p class="simulation-result__name">ご利用料金（月契約）</p>
                             <p class="simulation-result__price"><span class="simulation-result__price--num">3,980</span>円</p>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="simulation-result__noteArea">
-                        <p class="simulation-result__note">※ 年額プラン基本料金：35,760円、月額プラン基本料金：3,980円</p>
-                        <p class="simulation-result__note">※ ご利用の機能によって<a href="#" class="simulation-result__note--under">オプション料金</a>が発生する場合があります。 ※ 電帳法オプション：<a href="#" class="simulation-result__note--under">経費精算</a> ／<a href="#" class="simulation-result__note--under">債務支払</a></p>
+                        <p class="simulation-result__note">※ ご利用の機能によって、従量課金・オプション料金が発生する場合があります。</p>
+                        <!-- <p class="simulation-result__note">※ ご利用の機能によって<a href="#" class="simulation-result__note--under">オプション料金</a>が発生する場合があります。 ※ 電帳法オプション：<a href="#" class="simulation-result__note--under">経費精算</a> ／<a href="#" class="simulation-result__note--under">債務支払</a></p> -->
                     </div>
                     <a href="https://erp.moneyforward.com/registration/new/" target="_blank" rel="noopener" class="btn simulation-result__btn"><span class="btn__text">無料で始める</span></a>
                 </div>
@@ -488,20 +496,44 @@
             </div>
             <div class="qa-item">
                 <div class="inner qa-item__inner">
-                    <p class="qa-item__q">マネーフォワード クラウド確定申告は無料で使えますか？</p>
-                    <p class="qa-item__a">新規登録後、1ヶ月間はトライアルとして有料プランと同等の機能を無料でお試しいただけます。 また、導入に際しての初期費用は発生しません。 トライアル後、継続的にご利用にいただくには月額もしくは年額のプラン料金が発生します。<br><a class="qa-item__a--link">マネーフォワード クラウド確定申告の料金プラン</a></p>
+                    <p class="qa-item__q">スマホでも利用できますか？</p>
+                    <p class="qa-item__a">
+                        iOSとAndroidOSで専用アプリを用意しています。
+                        アプリとWebで同じデータを共有でき、アプリで仕訳・確定申告書の作成・電子申告が可能です。
+                        消費税申告書の提出もできます。
+                        PC（Web版）で作成した消費税申告書<span class="qa-item__a--small">※1</span>を、スマホアプリから電子申告<span class="qa-item__a--small">※2</span>できるようになりました。
+                        <br><a class="qa-item__a--link">アプリのダウンロードはこちら</a>
+                        <div class="qa-item__noteArea">
+                            <p class="qa-item__note">※1 消費税申告機能は「パーソナルプラン」をご利用の場合に利用できます。<br>また、課税期間および申告書の作成はWeb版のみの対応となります。詳細は<a href="#" class="qa-item__noteLink">こちら</a>のガイドをご確認ください。</p>
+                            <p class="qa-item__note">※2 アプリでの電子申告には、マイナンバーカードとカード読み込みに対応したスマートフォンが必要となります。</p>
+                        </div>
+                    </p>
                 </div>
             </div>
             <div class="qa-item">
                 <div class="inner qa-item__inner">
-                    <p class="qa-item__q">マネーフォワード クラウド確定申告は無料で使えますか？</p>
-                    <p class="qa-item__a">新規登録後、1ヶ月間はトライアルとして有料プランと同等の機能を無料でお試しいただけます。 また、導入に際しての初期費用は発生しません。 トライアル後、継続的にご利用にいただくには月額もしくは年額のプラン料金が発生します。<br><a class="qa-item__a--link">マネーフォワード クラウド確定申告の料金プラン</a></p>
+                    <p class="qa-item__q">電子申告（e-Tax）に対応してますか？</p>
+                    <p class="qa-item__a">
+                        はい、Web版からのデータエクスポートにより、e-Taxソフトのインストール型での確定申告に対応しています。<br>
+                        また、スマホアプリ版ではアプリから電子申告が可能です。<a class="qa-item__a--link">詳細はこちら</a>からご確認ください。</p>
                 </div>
             </div>
             <div class="qa-item">
                 <div class="inner qa-item__inner">
-                    <p class="qa-item__q">マネーフォワード クラウド確定申告は無料で使えますか？</p>
-                    <p class="qa-item__a">新規登録後、1ヶ月間はトライアルとして有料プランと同等の機能を無料でお試しいただけます。 また、導入に際しての初期費用は発生しません。 トライアル後、継続的にご利用にいただくには月額もしくは年額のプラン料金が発生します。<br><a class="qa-item__a--link">マネーフォワード クラウド確定申告の料金プラン</a></p>
+                    <p class="qa-item__q">確定申告書の作成まで簡単にできますか？</p>
+                    <p class="qa-item__a">
+                        日々の売上、経費の帳簿付けから確定申告書の提出まで一貫して対応しています。<br>
+                        初心者からベテランの方まで、幅広くご愛用いただいています。
+                    </p>
+                </div>
+            </div>
+            <div class="qa-item">
+                <div class="inner qa-item__inner">
+                    <p class="qa-item__q">導入に関して相談にのってもらえますか？</p>
+                    <p class="qa-item__a">
+                        はい、ご不明な点はチャットまたはメールでお問い合わせいただけます。
+                        <span class="qa-item__note">※ 会計や税務、労務に関するご相談はサポートの対象外です。</span>
+                    </p>
                 </div>
             </div>
         </div>

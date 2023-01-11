@@ -3,7 +3,11 @@
 .fv {
     width: 100%;
     height: auto;
-    
+    padding-top: 70px;
+
+    @include mq("sp") {
+        padding-top: 52px;
+    }
     
     &-container {
         position: relative;
