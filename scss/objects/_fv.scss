@@ -6,7 +6,7 @@
     padding-top: 70px;
 
     @include mq("sp") {
-        padding-top: 52px;
+        padding-top: 0;
     }
     
     &-container {

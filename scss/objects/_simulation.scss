@@ -94,11 +94,16 @@
             padding: 0 15px;
             display: flex;
             align-items: center;
-            gap: 18px;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(#C8D4FF, .6);
             cursor: pointer;
+            position: relative;
+
+            &.is-checked {
+                border: 2px solid $theme01_color;
+                background-color: #f3f5ff;
+            }
 
             @include mq("sp") {
                 width: 100%;
@@ -108,9 +113,13 @@
                 }
             }
 
-            input[type=radio] {
-                position: relative;
+            input[type="radio"] {
+                height: 100%;
                 cursor: pointer;
+                position: absolute;
+                margin: 0;
+                top: 50%;
+                transform: translateY(-50%);
 
                 &::before,
                 &::after {
@@ -118,20 +127,22 @@
                     display: block;
                     position: absolute;
                     border-radius: 50%;
+                    transform: translateY(-50%);
                 }
                 &::before {
                     width: 24px;
                     height: 24px;
                     background-color: #fff;
-                    top: -5px;
+                    top: 50%;
                     left: -5px;
                     border: 1px solid $gray01_color;
+
                 }
                 &::after {
                     width: 14px;
                     height: 14px;
                     background-color: #fff;
-                    top: 0;
+                    top: 50%;
                     left: 0;
                 }
                 
@@ -145,12 +156,18 @@
             }
         }
         
-        &__input {
-            
-        }
-        
         &__label {
+            width: 100%;
+            height: 100%;
             cursor: pointer;
+            padding-left: 18px;
+            position: relative;
+        }
+        &__labelText {
+            position: absolute;
+            top: 50%;
+            left: 35px;
+            transform: translateY(-50%);
         }
     }
 

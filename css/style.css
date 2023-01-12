@@ -159,6 +159,7 @@ p {
 @media (max-width: 767px) {
   .header {
     height: 52px;
+    position: relative;
   }
 }
 .header-inner {
@@ -374,7 +375,7 @@ p {
 }
 @media (max-width: 767px) {
   .fv {
-    padding-top: 52px;
+    padding-top: 0;
   }
 }
 .fv-container {
@@ -1152,6 +1153,7 @@ p {
   background-color: #D9D9D9;
   border-radius: 6px 6px 0 0;
   position: relative;
+  cursor: pointer;
 }
 .plan__tab.is-active {
   background-color: #C2D1FC;
@@ -1265,6 +1267,9 @@ p {
 }
 .plan-list__head .plan-list02__head--small::before {
   left: -18px;
+}
+.plan-list__head .plan-list02__head--small::after {
+  right: -18px;
 }
 .plan-list__head--big {
   font-size: 18px;
@@ -1490,12 +1495,16 @@ p {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 18px;
   background-color: #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 20px rgba(200, 212, 255, 0.6);
           box-shadow: 0 0 20px rgba(200, 212, 255, 0.6);
   cursor: pointer;
+  position: relative;
+}
+.simulation-a__wrap.is-checked {
+  border: 2px solid #0054AC;
+  background-color: #f3f5ff;
 }
 @media (max-width: 767px) {
   .simulation-a__wrap {
@@ -1506,20 +1515,27 @@ p {
   }
 }
 .simulation-a__wrap input[type=radio] {
-  position: relative;
+  height: 100%;
   cursor: pointer;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .simulation-a__wrap input[type=radio]::before, .simulation-a__wrap input[type=radio]::after {
   content: "";
   display: block;
   position: absolute;
   border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .simulation-a__wrap input[type=radio]::before {
   width: 24px;
   height: 24px;
   background-color: #fff;
-  top: -5px;
+  top: 50%;
   left: -5px;
   border: 1px solid #C4C4C4;
 }
@@ -1527,14 +1543,25 @@ p {
   width: 14px;
   height: 14px;
   background-color: #fff;
-  top: 0;
+  top: 50%;
   left: 0;
 }
 .simulation-a__wrap input[type=radio]:checked::after {
   background-color: #0054AC;
 }
 .simulation-a__label {
+  width: 100%;
+  height: 100%;
   cursor: pointer;
+  padding-left: 18px;
+  position: relative;
+}
+.simulation-a__labelText {
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .simulation-result {
   width: 100%;

@@ -20,38 +20,6 @@ for (let i = 0; i < reasonItemCloseBtn.length; i++) {
     });
 }
 
-// スクロールアニメーション（SP時フッター）
-(function() {
-    const fh = document.querySelector('.sp-footerBtns');
-    const isUp = (function() {
-      const scrollElement = document.scrollingElement;
-      let flag, prePoint, scrollPoint;
-      return function() {
-        scrollPoint = scrollElement.scrollTop;
-        flag = prePoint > scrollPoint ? true : false;
-        prePoint = scrollPoint;
-        return flag;
-      }
-    }());
-    
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 900) {
-        if (isUp()) {
-          fh.classList.remove('is-show');
-            } else {
-          fh.classList.add('is-show')
-            }
-        } else {
-        fh.classList.remove('is-show');
-        }
-        
-        if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.scrollHeight) {
-          fh.classList.add('is-show')
-      }
-    })
-}());
-  
-
 // planセクション タブ切り替えアニメーション実装
 document.addEventListener('DOMContentLoaded', function(){
     // タブに対してクリックイベントを適用
@@ -75,7 +43,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
-//qaセクション
+
+//simulation(QA)セクション
 const qaQ = document.querySelectorAll(".qa-item__q");
 
 // 質問1に回答すれば、質問2を出力する関数
@@ -90,8 +59,7 @@ function addClassToTarget() {
     radio2.addEventListener("click", function() {
       target.classList.add("is-show");
     });
-  }
-  
+}
 // Call the function
 addClassToTarget();
 // 質問1に回答すれば、質問2を出力する関数ここまで
@@ -106,6 +74,7 @@ const radio1 = document.querySelector('.simulation-a__input01');
 const radio2 = document.querySelector('.simulation-a__input02');
 const radio3 = document.querySelector('.simulation-a__input03');
 const radio4 = document.querySelector('.simulation-a__input04');
+
 function showItems() {
     if (radio1.checked && radio3.checked) {
         // 「お得に〜〜」と「はい」を選択した場合
@@ -128,4 +97,20 @@ function showItems() {
         document.querySelector('.simulation-result__container02').classList.remove('is-selected');
         document.querySelector('.simulation-result__container03').classList.remove('is-selected');
     }
+    //radioボタンを選択されている時に、背景色とボーダーカラーを変更するアニメーション
+    if (radio1.checked) {
+        radio1.parentNode.classList.add('is-checked')
+        radio2.parentNode.classList.remove('is-checked')
+    } else if (radio2.checked) {
+        radio2.parentNode.classList.add('is-checked')
+        radio1.parentNode.classList.remove('is-checked')
+    } 
+    if (radio3.checked) {
+        radio3.parentNode.classList.add('is-checked')
+        radio4.parentNode.classList.remove('is-checked')
+    } else if (radio4.checked) {
+        radio4.parentNode.classList.add('is-checked')
+        radio3.parentNode.classList.remove('is-checked')
+    }
 }
+

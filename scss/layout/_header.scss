@@ -11,6 +11,7 @@
 
     @include mq("sp") {
         height: 52px;
+        position: relative;
     }
 
     &-inner {
