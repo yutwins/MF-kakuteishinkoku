@@ -20,6 +20,8 @@ for (let i = 0; i < reasonItemCloseBtn.length; i++) {
     });
 }
 
+
+
 // planセクション タブ切り替えアニメーション実装
 document.addEventListener('DOMContentLoaded', function(){
     // タブに対してクリックイベントを適用
@@ -64,39 +66,39 @@ function addClassToTarget() {
 addClassToTarget();
 // 質問1に回答すれば、質問2を出力する関数ここまで
 
-for (let i = 0; i < qaQ.length; i++) {
-    qaQ[i].addEventListener('click', function() {
-        this.parentNode.classList.toggle('is-active');
-    });
-}
-
+// 質問ごとに結果を出し分ける関数の実装
 const radio1 = document.querySelector('.simulation-a__input01');
 const radio2 = document.querySelector('.simulation-a__input02');
 const radio3 = document.querySelector('.simulation-a__input03');
 const radio4 = document.querySelector('.simulation-a__input04');
 
+const result1 =  document.querySelector('.simulation-result__container01');
+const result2 =  document.querySelector('.simulation-result__container02');
+const result3 =  document.querySelector('.simulation-result__container03');
+
 function showItems() {
     if (radio1.checked && radio3.checked) {
         // 「お得に〜〜」と「はい」を選択した場合
-        document.querySelector('.simulation-result__container01').classList.add('is-selected');
-        document.querySelector('.simulation-result__container02').classList.remove('is-selected');
-        document.querySelector('.simulation-result__container03').classList.remove('is-selected');
+        result3.classList.add('is-selected');
+        result1.classList.remove('is-selected');
+        result2.classList.remove('is-selected');
     } else if (radio1.checked && radio4.checked) {
         // 「お得に〜〜」と「いいえ」を選択した場合
-        document.querySelector('.simulation-result__container01').classList.remove('is-selected');
-        document.querySelector('.simulation-result__container02').classList.add('is-selected');
-        document.querySelector('.simulation-result__container03').classList.remove('is-selected');
+        result1.classList.remove('is-selected');
+        result2.classList.add('is-selected');
+        result3.classList.remove('is-selected');
     } else if (radio2.checked && radio3.checked) {
         // 「所得税だけではなく〜〜」と「はい」を選択した場合
-        document.querySelector('.simulation-result__container01').classList.remove('is-selected');
-        document.querySelector('.simulation-result__container02').classList.remove('is-selected');
-        document.querySelector('.simulation-result__container03').classList.add('is-selected');
+        result1.classList.remove('is-selected');
+        result2.classList.remove('is-selected');
+        result3.classList.add('is-selected');
     } else if (radio2.checked && radio4.checked) {
         // 「所得税だけではなく〜〜」と「いいえ」を選択した場合
-        document.querySelector('.simulation-result__container01').classList.add('is-selected');
-        document.querySelector('.simulation-result__container02').classList.remove('is-selected');
-        document.querySelector('.simulation-result__container03').classList.remove('is-selected');
+        result1.classList.add('is-selected');
+        result2.classList.remove('is-selected');
+        result3.classList.remove('is-selected');
     }
+
     //radioボタンを選択されている時に、背景色とボーダーカラーを変更するアニメーション
     if (radio1.checked) {
         radio1.parentNode.classList.add('is-checked')
@@ -114,3 +116,10 @@ function showItems() {
     }
 }
 
+
+// qaセクションのクリックアクション
+for (let i = 0; i < qaQ.length; i++) {
+    qaQ[i].addEventListener('click', function() {
+        this.parentNode.classList.toggle('is-active');
+    });
+}
